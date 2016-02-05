@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+        <title>Tic-tac-toe server</title>
+
+    </head>
+    <body>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <th>Method</th>
+                    <th>Route</th>
+                    <th>Action</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>games/</td>
+                    <td>get the list of games on the server</td>
+                    <td>
+                        Response body:
+<pre class="prettyprint">
+[
+    {
+        "_id":"561f3f796ffb732b5c9835f2",
+        "token":"46197528478235466981444888441595",
+        "type":0,
+        "field1":1,
+        "field2":0,
+        "state":"second-player-turn"
+    },
+    {
+        "_id":"561f43306ffb732b5c9835f4",
+        "token":"979483055887313553541444889392350",
+        "type":0,
+        "field1":0,
+        "field2":0,
+        "state":"first-player-turn"
+    },
+    ...
+]
+</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>games/</td>
+                    <td>create a new game</td>
+                    <td>
+                        Request body:
+<pre class="prettyprint">
+    {
+        "type": 0
+    }
+</pre>
+                        Response body:
+<pre class="prettyprint">
+    {
+        "_id":"561f3f796ffb732b5c9835f2",
+        "token":"46197528478235466981444888441595",
+        "type":0,
+        "field1":1,
+        "field2":0,
+        "state":"second-player-turn"
+    }
+</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>games/:token</td>
+                    <td>get game status</td>
+                    <td>
+                        Response body:
+<pre class="prettyprint">
+    {
+        "_id":"561f3f796ffb732b5c9835f2",
+        "token":"46197528478235466981444888441595",
+        "type":0,
+        "field1":1,
+        "field2":0,
+        "state":"second-player-turn"
+    }
+</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>games/:token</td>
+                    <td>make a turn (position must be [0 - 8])</td>
+                    <td>
+                        Request body:
+<pre class="prettyprint">
+    {
+        "player": 1,
+        "position": 0
+    }
+</pre>
+                        Response body:
+<pre class="prettyprint">
+    {
+        "_id":"561f3f796ffb732b5c9835f2",
+        "token":"46197528478235466981444888441595",
+        "type":0,
+        "field1":1,
+        "field2":0,
+        "state":"second-player-turn"
+    }
+</pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    </body>
+</html>
