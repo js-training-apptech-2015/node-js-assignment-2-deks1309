@@ -1,0 +1,28 @@
+{
+  "name": "tic-tac-toe-server",
+  "version": "1.0.0",
+  "description": "## TicTacToe Backend",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.1",
+    "method-override": "^2.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-training-apptech-2015/node-js-assignment-2-deks1309.git"
+  },
+  "author": "Ostanin Ilia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/js-training-apptech-2015/node-js-assignment-2-deks1309/issues"
+  },
+  "homepage": "https://github.com/js-training-apptech-2015/node-js-assignment-2-deks1309#readme"
+}
