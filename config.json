@@ -1,0 +1,4 @@
+{
+    "dburi": "mongodb://admin:admin@ds055895.mongolab.com:55895/deks_tictactoe",
+    "port": 3000
+}
